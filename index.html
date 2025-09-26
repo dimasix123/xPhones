@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>xPhone Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- AUTH SCREEN -->
+  <div id="auth" class="screen active">
+    <div class="container">
+      <div class="logo-wrap big">
+        <svg viewBox="0 0 24 24" class="icon"><path d="M7 6h10v2a5 5 0 0 1-5 5 5 5 0 0 1-5-5V6zM5 6h2v2a7 7 0 0 0 14 0V6h2v2a9 9 0 0 1-18 0V6z" fill="none"/></svg>
+      </div>
+      <h1 class="title">Welcome to xPhone Store</h1>
+      <div class="form">
+        <input id="a-first" class="input" placeholder="Name" />
+        <input id="a-last" class="input" placeholder="Last Name" />
+        <input id="a-email" class="input" placeholder="Email" />
+      </div>
+      <div class="center mt-16">
+        <button id="auth-submit" class="btn btn-accent check-btn" aria-label="Continue">
+          <span class="check">✓</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATALOG SCREEN -->
+  <div id="catalog" class="screen">
+    <header class="header">
+      <div class="logo-wrap">
+        <svg viewBox="0 0 24 24" class="icon"><path d="M4 7h12v2a6 6 0 0 1-12 0V7zM18 7h2a3 3 0 0 1 0 6h-2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      </div>
+      <div class="brand">xPhone Store</div>
+      <div class="burger">
+        <span></span><span></span><span></span>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-cat="Phones">Phones</button>
+      <button class="tab" data-cat="Perfumes">Perfumes</button>
+      <button class="tab" data-cat="Clothes">Clothes</button>
+    </nav>
+
+    <main class="grid" id="grid"></main>
+
+    <div id="cart-bar" class="cart-bar hidden">
+      <button id="open-cart" class="btn btn-cart"><span class="cart-icon">🛒 🛒 🛒</span></button>
+    </div>
+  </div>
+
+  <!-- CART SCREEN -->
+  <div id="cart" class="screen">
+    <header class="header">
+      <div class="logo-wrap">
+        <svg viewBox="0 0 24 24" class="icon"><path d="M4 7h12v2a6 6 0 0 1-12 0V7zM18 7h2a3 3 0 0 1 0 6h-2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+      </div>
+      <div class="brand">Brew &amp; Co.</div>
+      <button id="back" class="back">Back</button>
+    </header>
+
+    <section id="cart-items" class="list"></section>
+
+    <section class="form form-pad">
+      <input id="c-first" class="input" placeholder="Name" />
+      <input id="c-last" class="input" placeholder="Last Name" />
+      <input id="c-email" class="input" placeholder="Email" />
+      <input id="c-addr" class="input" placeholder="Address" />
+      <div class="center mt-16 pb-96">
+        <button id="submit-order" class="btn btn-success check-btn" aria-label="Submit order">
+          <span class="check">✓</span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- SUCCESS OVERLAY -->
+  <div id="success" class="overlay hidden">
+    <div class="overlay-content">
+      <div class="big-check">✓</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
